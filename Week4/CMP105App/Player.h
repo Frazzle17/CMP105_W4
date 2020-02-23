@@ -7,7 +7,7 @@ public:
 	Player();
 	~Player();
 
-	void handleInput(float dt);
-	void update(float dt);
+	virtual void handleInput(float dt);
+	virtual void update(float dt);
 };
 
