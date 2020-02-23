@@ -3,6 +3,8 @@
 GameObject::GameObject()
 {
 	input = nullptr;
+	collider = false;
+	alive = true;
 }
 
 GameObject::~GameObject()
