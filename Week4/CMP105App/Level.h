@@ -5,6 +5,8 @@
 #include "Framework/GameObject.h"
 #include "Player.h"
 #include "Enemy.h"
+#include "Cursor.h"
+#include "Background.h"
 #include <string.h>
 #include <iostream>
 
@@ -31,8 +33,19 @@ private:
 	Player testSprite;
 	sf::Texture spriteTexture;
 
-	//Enemy goomba;
+	//Enemy goomba
 	sf::Texture goombaTexture;
 	Enemy goomba;
 
+	//Enemy beach ball
+	sf::Texture ballTexture;
+	Enemy ball;
+
+	//Cursor
+	sf::Texture cursorTexture;
+	Cursor cursor;
+
+	//Background
+	sf::Texture bgTexture;
+	Background bg;
 };
