@@ -2,7 +2,7 @@
 
 Enemy::Enemy()
 {
-
+	window = nullptr;
 }
 
 Enemy::~Enemy()
@@ -10,19 +10,17 @@ Enemy::~Enemy()
 
 }
 
-void Enemy::handleInput(float dt)
-{
-
-}
-
 void Enemy::update(float dt)
 {
+	sf::Vector2f enemySize = Enemy::getSize();
+	float xSize = enemySize.x;
+	float ySize = enemySize.y;
 	move(velocity * dt);
 	sf::Vector2u windowPos = window->getSize();
 	sf::Vector2f enemyPos = getPosition();
-	if (enemyPos.x > windowPos.x - 30)
+	if (enemyPos.x > windowPos.x - xSize)
 	{
-		enemyPos.x = windowPos.x - 30;
+		enemyPos.x = windowPos.x - xSize;
 		velocity.x *= -1;
 	}
 	if (enemyPos.x < 0)
@@ -30,9 +28,9 @@ void Enemy::update(float dt)
 		enemyPos.x = 0;
 		velocity.x *= -1;
 	}
-	if (enemyPos.y > windowPos.y - 30)
+	if (enemyPos.y > windowPos.y - ySize)
 	{
-		enemyPos.y = windowPos.y - 30;
+		enemyPos.y = windowPos.y - ySize;
 		velocity.y *= -1;
 	}
 	if (enemyPos.y < 0)

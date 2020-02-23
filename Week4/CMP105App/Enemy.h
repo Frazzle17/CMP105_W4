@@ -10,7 +10,6 @@ public:
 	Enemy();
 	~Enemy();
 
-	virtual void handleInput(float dt);
 	virtual void update(float dt);
 
 	void setWindow(sf::RenderWindow* win) { window = win; };
